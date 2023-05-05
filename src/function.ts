@@ -17,7 +17,10 @@ const person: {
   },
 };
 
-const greetFriends = (fr1: string, fr2: string, fr3: string): void =>
-  console.log(`hi ${fr1}\n hi ${fr2}\n hi ${fr3}`);
+// rest parameter function
+const greetFriends = (...friends: string[]): void =>
+  friends.forEach((fr) => {
+    console.log(fr);
+  });
 
-greetFriends("kashem", "lasem", "josim");
+greetFriends("kashem", "lasem", "josim", "time");
