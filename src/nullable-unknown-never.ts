@@ -23,3 +23,9 @@ const getMyCarSpeed = (speed: unknown) => {
 
 getMyCarSpeed(10);
 getMyCarSpeed("10 kmh");
+
+// never type
+function throwError(message: string): never {
+  throw new Error(message);
+}
+throwError("not connected");
