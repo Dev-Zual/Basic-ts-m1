@@ -16,3 +16,21 @@ console.log(isAdult);
 const isAuthenticate = null;
 const userName = isAuthenticate ?? "Guest";
 console.log(userName);
+
+type Manus = {
+  name: string;
+  address: {
+    city: string;
+    home?: string;
+  };
+};
+
+const manus1: Manus = {
+  name: "manus",
+  address: {
+    city: "ctiy",
+  },
+};
+
+const home = manus1?.address?.home ?? "no home";
+console.log(home);
