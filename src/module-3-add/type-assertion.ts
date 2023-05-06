@@ -2,7 +2,8 @@ let emni: any;
 
 emni = "next level";
 
-(emni as string).length;
+// (emni as string).length;
+<string>emni.length;
 
 function kgToGram(param: number | string): number | string | undefined {
   if (typeof param === "string") {
