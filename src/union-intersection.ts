@@ -18,3 +18,14 @@ type JuniorDeveloper = NoobDeveloper & {
 const newDeveloper: NoobDeveloper | JuniorDeveloper = {
   name: "zual",
 };
+
+type NextLevelDeveloper = JuniorDeveloper & {
+  leaderShipExperience: number;
+};
+
+const developer: NextLevelDeveloper = {
+  name: "next level",
+  expertise: "typescript",
+  experience: 2,
+  leaderShipExperience: 1,
+};
