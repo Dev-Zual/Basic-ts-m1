@@ -34,3 +34,11 @@ interface IAdd {
 const addtwo: IAdd = (num1, num2): number => {
   return num1 + num2;
 };
+
+// interface in array
+
+interface IRollNumber {
+  [index: number]: number;
+}
+
+const rollNumb: IRollNumber = [1, 2, 3];
