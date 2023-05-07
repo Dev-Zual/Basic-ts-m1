@@ -21,7 +21,7 @@ createArray1<number, Array<string>>(232, ["USA"]);
 
 // generic in spreed operator
 
-const addMeInMyCrushMind = (myInfo: object) => {
+const addMeInMyCrushMind = <T>(myInfo: T) => {
   const myCrush = "kate winslet";
   const newData = { ...myInfo, myCrush };
   return newData;
@@ -33,4 +33,11 @@ const myInfo = {
   salary: 100000000,
 };
 
-addMeInMyCrushMind(myInfo);
+const result = addMeInMyCrushMind(myInfo);
+
+// normal function generic
+function createArray3<X, Y>(param: X, param2: Y): [X, Y] {
+  return [param, param2];
+}
+createArray3<string, string>("zual", "nasima");
+createArray3<string, Array<number>>("zual", [123]);
