@@ -1,7 +1,8 @@
 // generic interface
-interface CrushInterface<T> {
+interface CrushInterface<T, U = null> {
   name: string;
   husband: T;
+  wife?: U;
 }
 const crush: CrushInterface<boolean> = {
   name: "kate winslet",
