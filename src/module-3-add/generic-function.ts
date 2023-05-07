@@ -6,3 +6,7 @@ const createArray = <T>(param: T): T[] => {
 
 createArray<string>("zual");
 createArray<number>(232);
+interface NameInterFace {
+  name: string;
+}
+createArray<NameInterFace>({ name: "bangladesh" });
