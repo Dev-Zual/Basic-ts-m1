@@ -16,6 +16,21 @@ createArray<NameInterFace>({ name: "bangladesh" });
 const createArray1 = <X, Y>(param: X, param2: Y): [X, Y] => {
   return [param, param2];
 };
-
 createArray1<string, string>("zual", "i love my country");
 createArray1<number, Array<string>>(232, ["USA"]);
+
+// generic in spreed operator
+
+const addMeInMyCrushMind = (myInfo: object) => {
+  const myCrush = "kate winslet";
+  const newData = { ...myInfo, myCrush };
+  return newData;
+};
+
+const myInfo = {
+  name: "zual",
+  age: 25,
+  salary: 100000000,
+};
+
+addMeInMyCrushMind(myInfo);
