@@ -1,3 +1,22 @@
+//json placeholder fetching
+interface IToDo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
+const getToDo = async (): Promise<IToDo> => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  return await res.json();
+};
+
+const getToDoData = async (): Promise<void> => {
+  const result = await getToDo();
+  console.log(result);
+};
+
+getToDoData();
+
 // mocking
 const makePromise = (): Promise<string> => {
   return new Promise<string>((resolve, reject) => {
