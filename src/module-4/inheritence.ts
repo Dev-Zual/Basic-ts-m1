@@ -1,4 +1,4 @@
-class Person {
+/* class Person {
   name: string;
   age: number;
   address: string;
@@ -41,3 +41,4 @@ class Teacher extends Person {
 
 const teacher1 = new Teacher("mr.kashem", 50, "uganda", "teacher");
 teacher1.takeClass(4);
+ */
