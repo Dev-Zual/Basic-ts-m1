@@ -9,8 +9,13 @@ type Volume = {
   depth: string;
 };
 
-type Area = {
-  [key in keyof Volume]: Volume[key];
+type Area<T> = {
+  //   [key in keyof Volume]: Volume[key];
+  [key in keyof T]: T[key];
+};
+
+const area1: Area<{ name: string }> = {
+  name: "xudlf",
 };
 
 type AreaString = {
@@ -18,9 +23,56 @@ type AreaString = {
   width: string;
 };
 
-const rectangularArea: Volume = {
-  height: 20,
-  width: 12,
-};
+// const rectangularArea: Volume = {
+//   height: 20,
+//   width: 12,
+// };
 
 // type A = AreaNumber['height']
+
+type Address<T> = {
+  [k in keyof T]: T[k];
+};
+
+const Add1: Address<{ city: string; district: string; road: number }> = {
+  city: "dhaka",
+  district: "jamalpur",
+  road: 121,
+};
+
+function getArrayItem<T, K extends keyof T>(
+  arr: T[],
+  index: number,
+  key: K
+): T[K] {
+  const item = arr[index];
+
+  return item[key];
+}
+
+const userss = [
+  { name: "John", age: 30 },
+  { name: "Mary", age: 25 },
+];
+
+console.log(getArrayItem(userss, 0, "name"));
+
+// type Data = { num1: number };
+// type B = {
+//   [key in keyof Data]: string;
+// };
+
+// const numbers: B = {
+//   num1: 20,
+// };
+
+interface Person {
+  firstName: string;
+
+  lastName: string;
+}
+function fullName<T extends Person>(person: T): string {
+  return `${person.firstName} ${person.lastName}`;
+}
+
+console.log(fullName<Person>({ firstName: "zual", lastName: "rana" }));
