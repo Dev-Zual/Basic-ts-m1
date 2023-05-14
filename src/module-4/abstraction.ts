@@ -37,5 +37,10 @@ abstract class Vehicle {
 }
 
 class Car extends Vehicle {
-  startEngine(): void {}
+  startEngine(): void {
+    console.log("start");
+  }
+  stopEngine(): void {
+    console.log("stop");
+  }
 }
