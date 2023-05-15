@@ -23,7 +23,7 @@ class Vehicle implements IVehicle {
 const vehicle1 = new Vehicle("car", "kawasaki", 999);
  */
 // abstract class
-abstract class Vehicle {
+/* abstract class Vehicle {
   constructor(
     public name: string,
     public brand: string,
@@ -43,4 +43,4 @@ class Car extends Vehicle {
   stopEngine(): void {
     console.log("stop");
   }
-}
+} */
