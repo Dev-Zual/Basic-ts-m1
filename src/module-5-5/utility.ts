@@ -20,3 +20,35 @@ type Optional = Partial<Person>;
 // Required
 // to make all the properties be required
 type RequiredType = Required<Person>;
+
+// Readonly
+const person: Readonly<Person> = {
+  name: "zual",
+  email: "abc@gmail.com",
+  contactNo: 111111,
+};
+
+person.name = "rana";
+
+// record type
+
+// type myObj = {
+//     a:string,
+//     b: string,
+//     c:string
+// }
+
+// using index signature
+// type myObj = {
+//   [key: string]: string;
+// };
+
+// using Record
+// type myObj = Record<string,string>
+type myObj = Record<"a" | "b" | "c", string>;
+
+const obj: myObj = {
+  a: "1",
+  b: "2",
+  c: "3",
+};
